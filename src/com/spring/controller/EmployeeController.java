@@ -23,7 +23,7 @@ public class EmployeeController {
 	private EmployeeService employeeService;
 	
 	@RequestMapping("/list")
-	public String listCustomers(Model theModel){
+	public String listEmployees(Model theModel){
 		
 		List<Employee> employees=employeeService.getEmployee();
 		
@@ -43,7 +43,7 @@ public class EmployeeController {
 	}
 	
 	@PostMapping("/saveEmployee")
-	public String saveCustomer(@ModelAttribute("employee") Employee theEmployee) {
+	public String saveEmployee(@ModelAttribute("employee") Employee theEmployee) {
 		
 		employeeService.saveEmployee(theEmployee);
 		
